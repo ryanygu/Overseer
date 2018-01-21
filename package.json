@@ -1,10 +1,11 @@
 {
-  "name": "StudyMate",
-  "description": "Temp description for Sentinel.",
+  "name": "Overseer",
+  "description": "A Google Assistant action to help increase
+  productivity and time management for students.",
   "version": "0.0.1",
   "private": true,
   "license": "Apache Version 2.0",
-  "author": "Ryan Gu",
+  "author": "Yellow Pans",
   "engines": {
     "node": "~6.0"
   },
