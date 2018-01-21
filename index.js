@@ -31,21 +31,19 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     console.log('Request body: ' + JSON.stringify(request.body));
 
     function addStudyActivity(app) {
-        let type = app.getArgument(ACTIVITY_TYPE_ARGUMENT); // will be 'study'
+        let type = 'study';
         let name = app.getArgument(ACTIVITY_NAME_ARGUMENT);
         // TODO: code here
         // Add info to database
-        app.tell('test: '+type+', '+name+'.');
-        app.tell('Okay, got it. Happy studying!');
+        app.tell('Okay, got it. Happy studying!'); //TODO: randomize this
     }
 
     function addBreakActivity(app) {
-        let type = app.getArgument(ACTIVITY_TYPE_ARGUMENT); // will be 'break'
+        let type = 'break';
         let name = app.getArgument(ACTIVITY_NAME_ARGUMENT);
         // TODO: code here
         // Add info to database
-        app.tell('test: '+type+', '+name+'.');
-        app.tell('Sounds good. Enjoy your break!');
+        app.tell('Sounds good. Enjoy your break!'); //TODO: randomize this
     }
 
     function endStudySession(app) {
@@ -56,19 +54,20 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
     function getGreeting(app) {
         //TODO: code here
-        app.ask('Insert random greeting here. Are you going to start studying, take a break, or end your study session? Or maybe you want to view your statistics or efficiency?')
+        //TODO: randomize this intro
+        app.ask('Hi, you can call me Overseer! Are you going to start studying, take a break, or end your study session? Or maybe you want to view your statistics or efficiency?');
     }
 
     function getStats(app) {
-        let userInfo = app.getArgument(USER_INFO_ARGUMENT); // will be 'stats'
+        let userInfo = 'stats';
         let timePeriod = app.getArgument(TIME_PERIOD_ARGUMENT);
-        app.tell('test: '+userInfo+', '+timePeriod+'.');
+        app.tell('(Mock data) You spent 25% (1h) of your time on csc209, and 75% (3h) of your time on YouTube.'); //TODO: get real data
     }
 
     function getEfficiency(map) {
-        let userInfo = app.getArgument(USER_INFO_ARGUMENT); // will be 'efficiency'
+        let userInfo = 'efficiency';
         let timePeriod = app.getArgument(TIME_PERIOD_ARGUMENT);
-        app.tell('test: '+userInfo+', '+timePeriod+'.');
+        app.tell('(Mock data) You were 43% efficient today!'); //TODO: get real data
     }
 
     let actionMap = new Map();
