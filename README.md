@@ -5,7 +5,3 @@ Overseer is a Google Assistant action meant to increasing productivity and time 
 More info: https://devpost.com/software/overseer
 
 Created for UofTHacks 2017.
-
-### Additional Notes
-
-This is a WIP. Currently not in development.
